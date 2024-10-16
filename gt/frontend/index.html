@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Sports Booking App</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Sports Booking System</h1>
+        <div>
+            <label for="centerSelect">Select Center:</label>
+            <select id="centerSelect">
+                <!-- Centers will be dynamically added -->
+            </select>
+        </div>
+        <div>
+            <label for="sportSelect">Select Sport:</label>
+            <select id="sportSelect">
+                <!-- Sports will be dynamically added -->
+            </select>
+        </div>
+        <div>
+            <label for="dateInput">Select Date:</label>
+            <input type="date" id="dateInput" />
+        </div>
+        <button id="viewBookings">View Bookings</button>
+        <button id="createBooking">Create Booking</button>
+        <div id="bookingList"></div>                     
+
+        <!-- Create Booking Form -->
+        <div id="createBookingForm" style="display:none;">
+            <h2>Create Booking</h2>
+            <label for="customerName">Customer Name:</label>
+            <input type="text" id="customerName" />
+            <label for="timeInput">Time Slot:</label>
+            <input type="time" id="timeInput" />
+            <button id="submitBooking">Submit Booking</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

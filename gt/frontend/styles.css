@@ -1,0 +1,138 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa; /* Light gray background */
+    color: #343a40; /* Darker text color for contrast */
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 30px;
+    background: linear-gradient(135deg, #6a82fb, #fc5c7d); /* Gradient background */
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.container:hover {
+    transform: scale(1.02); /* Slight zoom on hover */
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    color: #ffffff; /* White color for title */
+    text-transform: uppercase; /* Uppercase for emphasis */
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #ffffff; /* White color for labels */
+}
+
+select, input[type="date"], input[type="time"], input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 2px solid #ffffff; /* White border for inputs */
+    border-radius: 5px;
+    font-size: 1em;
+    transition: border-color 0.3s, box-shadow 0.3s; /* Transition for focus effect */
+}
+
+select:focus, input:focus {
+    border-color: #fc5c7d; /* Pink color on focus */
+    outline: none;
+    box-shadow: 0 0 5px rgba(252, 92, 125, 0.5); /* Pink glow effect */
+}
+
+button {
+    background-color: #fc5c7d; /* Pink color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+    margin-right: 10px;
+}
+
+button:hover {
+    background-color: #e53e6d; /* Darker pink on hover */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
+}
+
+button:active {
+    transform: scale(0.95); /* Slight scale on click */
+}
+
+#bookingList {
+    margin-top: 30px;
+    padding: 15px;
+    background-color: #ffffff; /* White background for booking list */
+    border-radius: 5px;
+    border: 1px solid #dee2e6; /* Subtle border */
+}
+
+#createBookingForm {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white for form */
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+#createBookingForm h2 {
+    margin-bottom: 15px;
+    font-size: 1.8em;
+    color: #343a40; /* Dark text for form title */
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    button {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    #createBookingForm {
+        padding: 15px;
+    }
+}
+
+/* Additional styling for animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.container, #createBookingForm, #bookingList {
+    animation: fadeIn 0.5s ease; /* Fade-in animation for elements */
+}
